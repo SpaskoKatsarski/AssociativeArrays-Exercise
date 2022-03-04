@@ -21,6 +21,9 @@ namespace Task_StudentsFromDifferentClasses
     {
         static void Main(string[] args)
         {
+            //DateTime dateNow = DateTime.Now;
+            //Console.WriteLine(dateNow);
+
             Dictionary<string, Student> students = new Dictionary<string, Student>();
 
             students.Add("8A", new Student("Pesho", 18));
@@ -37,7 +40,7 @@ namespace Task_StudentsFromDifferentClasses
 
             foreach (string student in studentsFrom9B)
             {
-                Console.WriteLine(student); 
+                Console.WriteLine(student);
             }
 
             List<int> studentsWithOddNumbers = students

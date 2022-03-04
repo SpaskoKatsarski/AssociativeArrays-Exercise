@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace T08._Company_Users
 {
@@ -31,6 +32,14 @@ namespace T08._Company_Users
                 }
                 else
                 {
+                    //if (companies.Any(c => c.Value.Contains(employeeId)))
+                    //{
+                    //    // We have the same ID with a person in other company
+                    //    Console.WriteLine($"ID: {employeeId} already exists!");
+                    //    command = Console.ReadLine();
+                    //    continue;
+                    //}
+
                     companies.Add(companyName, new List<string>()
                     {
                         employeeId

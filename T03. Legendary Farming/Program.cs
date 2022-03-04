@@ -96,12 +96,12 @@ namespace T03._Legendary_Farming
 
             materials[legendaryMaterial] -= requiredForLegendary;
 
-            foreach (KeyValuePair<string, int> goodMaterial in materials.Where(m => m.Key == "shards" || m.Key == "motes" || m.Key == "fragments"))
+            foreach (KeyValuePair<string, int> goodMaterial in materials.Where(m => m.Key == "shards" || m.Key == "fragments" || m.Key == "motes"))
             {
                 Console.WriteLine($"{goodMaterial.Key} -> {goodMaterial.Value}");
             }
 
-            foreach (KeyValuePair<string, int> badMaterial in materials.Where(m => m.Key != "shards" && m.Key != "motes" && m.Key != "fragments"))
+            foreach (KeyValuePair<string, int> badMaterial in materials.Where(m => m.Key != "shards" && m.Key != "fragments" && m.Key != "motes"))
             {
                 Console.WriteLine($"{badMaterial.Key} -> {badMaterial.Value}");
             }
