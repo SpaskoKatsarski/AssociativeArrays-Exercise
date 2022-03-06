@@ -8,13 +8,13 @@ namespace T03._Legendary_Farming
     {
         static void Main(string[] args)
         {
-            const int requiredForLegendary = 250;
+            const int RequiredForLegendary = 250;
 
             Dictionary<string, int> materials = new Dictionary<string, int>();
 
             while (true)
             {
-                if (materials.Any(item => item.Value >= requiredForLegendary && (item.Key == "motes" || item.Key == "shards" || item.Key == "fragments")))
+                if (materials.Any(item => item.Value >= RequiredForLegendary && (item.Key == "motes" || item.Key == "shards" || item.Key == "fragments")))
                 {
                     // We have gathered the materials for a legendary!
                     break;
@@ -71,7 +71,7 @@ namespace T03._Legendary_Farming
 
             foreach (KeyValuePair<string, int> material in materials.Where(m => m.Key == "motes" || m.Key == "shards" || m.Key == "fragments"))
             {
-                if (material.Value >= requiredForLegendary)
+                if (material.Value >= RequiredForLegendary)
                 {
                     if (material.Key == "shards")
                     {
@@ -94,7 +94,7 @@ namespace T03._Legendary_Farming
                 }
             }
 
-            materials[legendaryMaterial] -= requiredForLegendary;
+            materials[legendaryMaterial] -= RequiredForLegendary;
 
             foreach (KeyValuePair<string, int> goodMaterial in materials.Where(m => m.Key == "shards" || m.Key == "fragments" || m.Key == "motes"))
             {

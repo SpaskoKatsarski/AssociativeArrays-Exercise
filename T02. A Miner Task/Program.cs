@@ -16,14 +16,12 @@ namespace T02._A_Miner_Task
                 string resource = command;
                 ulong quantityOfResource = ulong.Parse(Console.ReadLine());
 
-                if (resources.ContainsKey(resource))
+                if (!resources.ContainsKey(resource))
                 {
-                    resources[resource] += quantityOfResource;
+                    resources[resource] = 0;
                 }
-                else
-                {
-                    resources.Add(resource, quantityOfResource);
-                }
+
+                resources[resource] += quantityOfResource;
 
                 command = Console.ReadLine();
             }

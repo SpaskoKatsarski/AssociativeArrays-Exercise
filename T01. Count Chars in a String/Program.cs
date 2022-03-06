@@ -8,9 +8,9 @@ namespace T01._Count_Chars_in_a_String
     {
         static void Main(string[] args)
         {
-            string str = Console.ReadLine();
-            
             Dictionary<char, int> chars = new Dictionary<char, int>();
+            
+            string str = Console.ReadLine();
 
             for (int i = 0; i < str.Length; i++)
             {
