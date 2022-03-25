@@ -21,13 +21,10 @@ namespace T06._Courses
 
                 if (!courses.ContainsKey(currentCourse))
                 {
-                    courses.Add(currentCourse, new List<string>{nameOfStudent});
+                    courses.Add(currentCourse, new List<string>());
                 }
 
-                if (!courses[currentCourse].Contains(nameOfStudent))
-                {
-                    courses[currentCourse].Add(nameOfStudent);
-                }
+                courses[currentCourse].Add(nameOfStudent);
 
                 input = Console.ReadLine();
             }
@@ -38,7 +35,7 @@ namespace T06._Courses
 
                 foreach (var student in course.Value)
                 {
-                    Console.WriteLine($"-- {student}"); 
+                    Console.WriteLine($"-- {student}");
                 }
             }
 

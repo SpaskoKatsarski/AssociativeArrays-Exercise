@@ -7,13 +7,6 @@ namespace T._03.LegendaryFarming_Second_Retake
     {
         static void Main(string[] args)
         {
-            Dictionary<string, string> craftingTable = new Dictionary<string, string>
-            {
-                { "shards", "Shadowmourne" },
-                { "motes", "Dragonwrath" },
-                { "fragments", "Valanyr" }
-            };
-
             Dictionary<string, int> keyMaterials = new Dictionary<string, int>
             {
                 { "shards", 0 },
@@ -30,7 +23,7 @@ namespace T._03.LegendaryFarming_Second_Retake
                 string materialsLine = Console.ReadLine().ToLower();
                 string[] materialsArr = materialsLine.Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
-                ProcessInputLine(keyMaterials, junk, materialsArr, ref obtainedItem, craftingTable);
+                ProcessInputLine(keyMaterials, junk, materialsArr, ref obtainedItem);
             }
 
             Console.WriteLine($"{obtainedItem} obtained!");
@@ -46,9 +39,16 @@ namespace T._03.LegendaryFarming_Second_Retake
             }
         }
 
-        public static void ProcessInputLine(Dictionary<string, int> keyMaterials, Dictionary<string, int> junk, string[] materialsArr, ref string obtainedItem, Dictionary<string, string> craftingTable)
+        public static void ProcessInputLine(Dictionary<string, int> keyMaterials, Dictionary<string, int> junk, string[] materialsArr, ref string obtainedItem)
         {
             const int requiredMaterials = 250;
+
+            Dictionary<string, string> craftingTable = new Dictionary<string, string>
+            {
+                { "shards", "Shadowmourne" },
+                { "motes", "Dragonwrath" },
+                { "fragments", "Valanyr" }
+            };
 
             for (int i = 0; i < materialsArr.Length; i += 2)
             {
